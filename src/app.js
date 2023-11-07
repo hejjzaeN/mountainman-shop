@@ -7,5 +7,5 @@ const app = express();
 app.use('/order', orderRouter)
 
 app.listen(ENV.APP_PORT, () => {
-  console.log(`Example app listening on port ${ENV.APP_PORT}`)
+  console.log(`Application is running on port ${ENV.APP_PORT}`)
 });
