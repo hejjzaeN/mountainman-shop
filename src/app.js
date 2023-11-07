@@ -1,11 +1,10 @@
 import express from 'express';
 import ENV from './env';
+import orderRouter from './order/order.router';
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
+app.use('/order', orderRouter)
 
 app.listen(ENV.APP_PORT, () => {
   console.log(`Example app listening on port ${ENV.APP_PORT}`)
