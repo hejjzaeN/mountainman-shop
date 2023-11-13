@@ -6,6 +6,8 @@ const {
   BREVO_PORT,
   BREVO_LOGIN,
   BREVO_PASSWORD,
+  MAIL_FROM,
+  MAIL_TO,
 } = process.env;
 
 export default {
@@ -16,4 +18,6 @@ export default {
   BREVO_PORT: +BREVO_PORT,
   BREVO_LOGIN,
   BREVO_PASSWORD,
+  MAIL_FROM,
+  MAIL_TO,
 };

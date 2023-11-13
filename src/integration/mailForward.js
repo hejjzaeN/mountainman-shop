@@ -15,8 +15,8 @@ async function main() {
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: 'gt94002@gmail.com',
-    to: 'gt94001@gmail.com',
+    from: ENV.MAIL_FROM,
+    to: ENV.MAIL_TO,
     subject: 'Test email',
     text: 'Hello {{ contact.FIRSTNAME }} , This is an SMTP message with customizations',
   });
