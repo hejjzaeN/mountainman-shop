@@ -16,12 +16,12 @@ async function main() {
   // send mail with defined transport object
   let info = await transporter.sendMail({
     from: 'pashokey@mail.ru', // sender address
-    to: "pashokey@mail.ru", // list of receivers
-    subject: "Test email", // Subject line
-    text: "Hello {{ contact.FIRSTNAME }} , This is an SMTP message with customizations", // plain text body
+    to: 'pashokey@mail.ru', // list of receivers
+    subject: 'Test email', // Subject line
+    text: 'Hello {{ contact.FIRSTNAME }} , This is an SMTP message with customizations', // plain text body
   });
 
-  console.log("Message sent: %s", info.messageId);
+  console.log('Message sent: %s', info.messageId);
   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 }
 
