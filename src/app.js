@@ -1,4 +1,5 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import ENV from './env';
 import orderRouter from './order/order.router';
 import errorHandler from './middleware/error.mw';
@@ -6,8 +7,7 @@ import errorHandler from './middleware/error.mw';
 function main () {
   const app = express();
 
-  express.json();
-
+  app.use(bodyParser.json())
   app.use('/order', orderRouter)
   app.use(errorHandler)
 
