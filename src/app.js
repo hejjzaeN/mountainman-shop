@@ -1,11 +1,19 @@
 import express from 'express';
 import ENV from './env';
 import orderRouter from './order/order.router';
+import errorHandler from './middleware/error.mw';
 
-const app = express();
+function main () {
+  const app = express();
 
-app.use('/order', orderRouter)
+  express.json();
 
-app.listen(ENV.APP_PORT, () => {
-  console.log(`Application is running on port ${ENV.APP_PORT}`)
-});
+  app.use('/order', orderRouter)
+  app.use(errorHandler)
+
+  app.listen(ENV.APP_PORT, () => {
+    console.log(`Application is running on port ${ENV.APP_PORT}`)
+  });
+}
+
+main();

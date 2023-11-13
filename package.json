@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node -r dotenv/config --es-module-specifier-resolution=node --experimental-modules src/app.js",
     "dev": "nodemon -L --watch src --inspect=0.0.0.0 -r dotenv/config --es-module-specifier-resolution=node --experimental-modules src/app.js",
+    "mail": "nodemon -L --watch src --inspect=0.0.0.0 -r dotenv/config --es-module-specifier-resolution=node --experimental-modules src/int/mail-forward.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
