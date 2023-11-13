@@ -5,6 +5,7 @@ const {
   BREVO_API_KEY,
   BREVO_PORT,
   BREVO_LOGIN,
+  BREVO_PASSWORD,
 } = process.env;
 
 export default {
@@ -12,6 +13,7 @@ export default {
   SMTP_SERVER: BREVO_SMTP_SERVER,
   SMTP_KEY: BREVO_SMTP_KEY,
   BREVO_API_KEY,
-  PORT: BREVO_PORT,
-  LOGIN: BREVO_LOGIN,
+  BREVO_PORT: +BREVO_PORT,
+  BREVO_LOGIN,
+  BREVO_PASSWORD,
 };

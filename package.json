@@ -20,8 +20,11 @@
   },
   "homepage": "https://github.com/hejjzaeN/mountainman-shop#readme",
   "dependencies": {
+    "@getbrevo/brevo": "^1.0.1",
+    "axios": "^1.6.1",
     "eslint": "^8.53.0",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7"
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
