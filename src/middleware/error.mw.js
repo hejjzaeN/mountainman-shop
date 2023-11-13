@@ -1,4 +1,4 @@
-export default async function errorHandler (err, req, res, next) {
+export default function errorHandler (err, req, res, next) {
   if (!err.statusCode) {
     err.statusCode = 500;
   }

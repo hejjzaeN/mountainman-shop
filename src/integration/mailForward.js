@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer'
 import ENV from '../env.js';
 
-async function main() {
+const main = async () => {
   let transporter = nodemailer.createTransport({
     host: ENV.SMTP_SERVER,
     port: ENV.BREVO_PORT,

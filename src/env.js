@@ -8,6 +8,7 @@ const {
   BREVO_PASSWORD,
   MAIL_FROM,
   MAIL_TO,
+  MONGODB_URL,
 } = process.env;
 
 export default {
@@ -20,4 +21,5 @@ export default {
   BREVO_PASSWORD,
   MAIL_FROM,
   MAIL_TO,
+  MONGODB_URL,
 };
