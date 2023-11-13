@@ -14,8 +14,8 @@ async function main() {
   let info = await transporter.sendMail({
     from: ENV.MAIL_FROM,
     to: ENV.MAIL_TO,
-    subject: 'Test email',
-    text: 'Hello {{ contact.FIRSTNAME }} , This is an SMTP message with customizations',
+    subject: 'Mountainman — Новый заказ!',
+    text: 'Зарегистрирован запрос на заказ',
   });
 
   console.log('Сообщение отправлено: %s', info.messageId);
