@@ -19,6 +19,6 @@ async function main() {
   });
 
   console.log('Сообщение отправлено: %s', info.messageId);
-}
+};
 
 main().catch(console.error);
