@@ -1,10 +1,11 @@
+import logger from '../../utils/logger';
 import { Order } from './order.model';
 
 const create = async (data) => {
   const order = new Order(data);
   const savedOrder = await order.save(data, { isNew: true });
 
-  console.log('order = ', savedOrder);
+  logger.info(`order = ${ savedOrder }`);
 
   if (!savedOrder) {
     throw new Error('Заказ не удалось сохранить в БД');

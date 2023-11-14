@@ -4,6 +4,7 @@ import ENV from './env';
 import orderRouter from './entity/order/order.router';
 import errorHandler from './middleware/error.mw';
 import { startDB } from './db/controller';
+import logger from './utils/logger';
 
 const main = async () => {
   const app = express();
@@ -15,7 +16,7 @@ const main = async () => {
   await startDB();
 
   app.listen(ENV.APP_PORT, () => {
-    console.log(`Application is running on port ${ENV.APP_PORT}`)
+    logger.info(`Application is running on port ${ENV.APP_PORT}`)
   });
 };
 

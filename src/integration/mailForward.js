@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer'
 import ENV from '../env.js';
+import logger from '../utils/logger.js';
 
 const main = async () => {
   let transporter = nodemailer.createTransport({
@@ -18,7 +19,7 @@ const main = async () => {
     text: 'Зарегистрирован запрос на заказ',
   });
 
-  console.log('Сообщение отправлено: %s', info.messageId);
+  logger.info(`Сообщение отправлено: ${ info.messageId }`);
 };
 
 main().catch(console.error);

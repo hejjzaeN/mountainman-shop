@@ -1,3 +1,5 @@
+import logger from '../utils/logger';
+
 export default function errorHandler (err, req, res, next) {
   if (!err.statusCode) {
     err.statusCode = 500;
@@ -5,7 +7,7 @@ export default function errorHandler (err, req, res, next) {
 
   const error = `Ошибка: ${ err.message }.`;
 
-  console.error(error);
+  logger.error(error);
 
   res.status(err.statusCode).json({ error })
 };

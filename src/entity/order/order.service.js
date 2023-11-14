@@ -21,7 +21,6 @@ const create = async (req, res) => {
   const order = await orderRepo.create({
     id,
     items,
-    createdAt,
     customerName,
     customerContact,
     totalPrice: getTotalPrice(items),
