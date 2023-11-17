@@ -14,6 +14,10 @@ const create = async (data) => {
   return savedOrder;
 };
 
+const findLatest = async (data) => {
+  return await Order.findOne(data).sort({ id: 'desc' });;
+};
+
 const getLastId = async () => {
   return Order.find().sort({'id':-1}).limit(1).then(([order]) => order?.id || 0);
 }
@@ -21,4 +25,5 @@ const getLastId = async () => {
 export default {
   create,
   getLastId,
+  findLatest,
 };
