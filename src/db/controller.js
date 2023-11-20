@@ -1,10 +1,18 @@
 import mongoose from 'mongoose';
 import ENV from '../env.js';
 
-export const startDB = async () => {
+const connect = async () => {
+  return mongoose.connect(ENV.MONGODB_URL);
+}
+
+const startDB = async () => {
   try {
-    await mongoose.connect(ENV.MONGODB_URL);
+    await connect();
   } catch (error) {
-    console.error(`Ошибка подключения: ${ error.message }`)
+    console.error(`Ошибка подключения: ${ error.message }`);
+
+    setTimeout(startDB, 10000);
   }
 };
+
+export default startDB;
