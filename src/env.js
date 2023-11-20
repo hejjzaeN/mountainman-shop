@@ -9,6 +9,8 @@ const {
   MAIL_FROM,
   MAIL_TO,
   MONGODB_URL,
+  OWNER_MOBILE,
+  ORDER_TIME_OFFSET,
 } = process.env;
 
 export default {
@@ -22,4 +24,6 @@ export default {
   MAIL_FROM,
   MAIL_TO,
   MONGODB_URL,
+  OWNER_MOBILE,
+  ORDER_TIME_OFFSET,
 };
