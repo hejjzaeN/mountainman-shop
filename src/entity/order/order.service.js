@@ -5,7 +5,7 @@ import orderRepo from './order.repo.js';
 import ENV from '../../env.js';
 
 const validateFields = (fields) => {
-  return fields && fields.customerName && fields.customerContact && fields.items.length;
+  return fields && fields.customerName && fields.customerContact && fields.items && fields.items.length;
 };
 
 const getTotalPrice = (items) => {
