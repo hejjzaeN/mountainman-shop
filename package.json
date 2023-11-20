@@ -4,6 +4,9 @@
   "description": "",
   "type": "module",
   "main": "app.js",
+  "engines" : { 
+    "node" : ">=16.0.0 <20.9.0"
+  },
   "scripts": {
     "start": "node -r dotenv/config --es-module-specifier-resolution=node --experimental-modules src/app.js",
     "dev": "nodemon -L --watch src --inspect=0.0.0.0 -r dotenv/config --es-module-specifier-resolution=node --experimental-modules src/app.js",
