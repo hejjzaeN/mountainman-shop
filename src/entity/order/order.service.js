@@ -1,8 +1,8 @@
 import moment from 'moment';
-import sender from '../../integration/mailForward';
-import logger from '../../utils/logger';
-import orderRepo from './order.repo';
-import ENV from '../../env';
+import sender from '../../integration/mailForward.js';
+import logger from '../../utils/logger.js';
+import orderRepo from './order.repo.js';
+import ENV from '../../env.js';
 
 const validateFields = (fields) => {
   return fields && fields.customerName && fields.customerContact && fields.items.length;

@@ -1,4 +1,4 @@
-import logger from '../utils/logger';
+import logger from '../utils/logger.js';
 
 export default function errorHandler (err, req, res, next) {
   if (!err.statusCode) {

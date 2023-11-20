@@ -1,5 +1,5 @@
-import logger from '../../utils/logger';
-import { Order } from './order.model';
+import logger from '../../utils/logger.js';
+import { Order } from './order.model.js';
 
 const create = async (data) => {
   const order = new Order(data);
